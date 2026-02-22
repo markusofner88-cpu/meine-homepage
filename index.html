@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Meine Lacktechnik-Übungsseite</title>
+<style>
+/* Grundlayout */
+body { font-family: Arial, sans-serif; margin:0; padding:0; }
+nav { background:#333; padding:10px;}
+nav a { color:white; margin:0 15px; text-decoration:none;}
+header { background:#555; color:white; padding:60px; text-align:center;}
+.section { padding:40px; }
+.services { display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
+.service { background:#f4f4f4; padding:20px; width:280px; border-radius:8px;}
+footer { background:#333; color:white; text-align:center; padding:15px;}
+</style>
+</head>
+<body><section style="text-align:center; padding:40px;">
+    <h2>Meine Arbeiten</h2>
+
+    <img id="sliderBild"
+        src="https://via.placeholder.com/800x400"
+        style="width:80%; max-width:800px; border-radius:15px;">
+
+</section>
+
+<!-- Navigation -->
+<nav>
+  <a href="#start">Startseite</a>
+  <a href="#aktionen">Aktionen</a>
+  <a href="#referenzen">Referenzen</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<!-- Header -->
+<header id="start">
+  <h1>Willkommen bei meiner Webdesign Seite</h1>
+  <p>Dies ist ein Nachbau als Programmierübung</p>
+</header>
+
+<!-- Services -->
+<section class="section" id="aktionen">
+  <h2>Aktionen & Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3>HTML</h3>
+      <p>Ich biete Ihnen professionelle Websites an.</p>
+    </div>
+    <div class="service">
+      <h3>CSS</h3>
+      <p>Website Design.</p>
+    </div>
+    <div class="service">
+      <h3>JAVASCRIPT</h3>
+      <p>Animationen, Klickaktionen oder dynamische Inhalte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Referenzen -->
+<section class="section" id="referenzen">
+  <h2>Referenzen</h2>
+  <p>Beispiele meiner Arbeiten …</p>
+</section>
+
+<!-- Kontakt -->
+<section class="section" id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Name: Markus Ofner</p>
+  <p>Telefon: folgt in Kürze</p>
+  <p>Email: folgt in Kürze</p>
+  <p>Adresse: folgt in Kürze</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 Meine Übungsseite
+</footer>
+
+<script>
+
+const bilder = [
+    "bilder/html.jpg",
+    "bilder/css.png",
+    "bilder/javascript.webp"
+];
+
+let index = 0;
+
+function wechselBild(){
+    index++;
+    if(index >= bilder.length){
+        index = 0;
+    }
+
+    document.getElementById("sliderBild").src = bilder[index];
+}
+
+setInterval(wechselBild, 3000);
+
+</script>
+</body>
+</html>
